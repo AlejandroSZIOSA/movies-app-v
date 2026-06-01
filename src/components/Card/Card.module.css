@@ -1,0 +1,56 @@
+.cardRootContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cardRootContainer p {
+  text-align: center;
+}
+
+.cardRootContainer img {
+  border-radius: 8px;
+}
+
+.small {
+  width: 150px;
+  height: auto;
+}
+
+.medium {
+  width: 300px;
+  height: auto;
+}
+
+.noImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(139, 139, 139);
+  border-radius: 10px;
+}
+
+.noImageContainer p {
+  text-align: center;
+  color: white;
+}
+
+.noImageContainer.medium {
+  height: 450px;
+}
+
+.noImageContainer.small {
+  height: 225px;
+}
+
+@media (min-width: 1024px) {
+  .medium {
+    width: 170px;
+    height: auto;
+  }
+
+  .noImageContainer.medium {
+    height: 255px;
+  }
+}

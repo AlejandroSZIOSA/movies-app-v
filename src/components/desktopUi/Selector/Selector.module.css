@@ -1,0 +1,6 @@
+.selectorRoot {
+  background-color: var(--bg-selector);
+  padding: 4px;
+  width: stretch;
+  text-align: center;
+}

@@ -1,0 +1,83 @@
+.rootContainer {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+
+/* Open button */
+.openButton {
+  width: 9rem;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  background: var(--bg-selector);
+  color: black;
+  cursor: pointer;
+}
+
+/* Fullscreen mobile overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Bottom sheet modal */
+.modal {
+  width: 100%;
+  background-color: var(--bg-picker);
+  border-radius: 20px;
+  padding: 1.2rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  animation: slideUp 0.25s ease;
+}
+
+/* Genre option buttons */
+.genreButton {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 12px;
+  background: var(--bg-btn-picker);
+  color: var(--text);
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.genreButton:active {
+  transform: scale(0.98);
+}
+
+/* Close button */
+.closeButton {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 0.6rem;
+  border: none;
+  border-radius: 12px;
+  background: #c00000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

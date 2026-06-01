@@ -1,0 +1,36 @@
+.moviesActorSectionRootContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3px;
+}
+
+.moviesActorSectionRootContainer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.moviesActorSectionRootContainer ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin: auto;
+}
+
+.moviesActorSectionRootContainer ol li {
+  border: 2px solid var(--border-list-items);
+  padding: 0.5rem;
+  align-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .moviesActorSectionRootContainer {
+    padding: 0.8rem 0;
+  }
+
+  .moviesActorSectionRootContainer ol {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+}

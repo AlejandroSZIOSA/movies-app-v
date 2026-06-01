@@ -1,0 +1,134 @@
+/* Global Styles Mobile */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  color: #222831;
+  text-align: center;
+  z-index: 1000;
+  background-color: var(--bg-header);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+hr {
+  width: stretch;
+}
+
+input {
+  font-size: x-large;
+}
+
+button {
+  font-size: 1.1rem;
+}
+
+ol {
+  list-style: none;
+  width: 95%;
+}
+
+a {
+  color: var(--text-links);
+}
+
+@media (min-width: 1024px) {
+  main {
+    align-items: normal;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark Ligth modes global css variables */
+body.light {
+  --bg-header: #948979;
+  --bg: #f5f5f5;
+  --text: #111;
+  --text-links: #0011ff;
+  --bg-btn-back: black;
+  --bg-selector: #ffd900;
+  --bg-picker: #948979;
+  --bg-btn-picker: #ffd900;
+  --border-color: #948979;
+  --border-search-bar: #00a2ff;
+  --border-list-items: #948979;
+}
+
+body.dark {
+  --bg-header: #ffae35;
+  --bg: #242424;
+  --text: #f5f5f5;
+  --text-links: rgb(127, 255, 212);
+  --bg-btn-back: crimson;
+  --bg-selector: rgb(127, 255, 212);
+  --bg-picker: rgb(127, 255, 212);
+  --bg-btn-picker: rgb(49, 49, 49);
+  --bg-theme-toggle: black;
+  --border-color: #948979;
+  --border-search-bar: black;
+  --border-list-items: #757575;
+}

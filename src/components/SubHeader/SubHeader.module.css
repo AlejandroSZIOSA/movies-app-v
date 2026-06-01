@@ -1,0 +1,11 @@
+.subHeaderRootContainer {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0;
+}
+
+@media (min-width: 1024px) {
+  .subHeaderRootContainer {
+    padding: 0.5rem 0;
+  }
+}

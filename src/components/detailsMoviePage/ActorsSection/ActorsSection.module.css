@@ -1,0 +1,36 @@
+.actorsSectionRootContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3px;
+}
+
+.actorsSectionRootContainer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.actorsSectionRootContainer ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin: auto;
+}
+
+.actorsSectionRootContainer ol li {
+  border: 2px solid var(--border-list-items);
+  padding: 0.5rem;
+  align-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .actorsSectionRootContainer {
+    padding: 0.8rem 0;
+  }
+  .actorsSectionRootContainer ol {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+}

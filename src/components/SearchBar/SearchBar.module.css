@@ -1,0 +1,43 @@
+.searchBarRootContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.searchBarInputContainer {
+  display: inline-flex;
+  width: 95%;
+  margin: auto;
+}
+
+.searchBarInputContainer input {
+  width: stretch;
+}
+
+.searchBarInputContainer input:focus {
+  outline: none; /* removes default blue outline */
+  border: 3px solid var(--border-search-bar);
+}
+
+.searchBarInputContainer button {
+  padding: 0.5rem 0.8rem;
+  background-color: #313131;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.searchBarInputContainer button:disabled {
+  opacity: 0.5;
+}
+
+@media (min-width: 1024px) {
+  .searchBarRootContainer {
+    width: 20%;
+  }
+
+  .searchBarInputContainer button {
+    cursor: pointer;
+  }
+}

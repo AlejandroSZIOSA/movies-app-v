@@ -1,0 +1,29 @@
+.genresSectionRootContainer {
+  display: block;
+  width: 100%;
+  padding: 3px;
+}
+
+.genresSectionRootContainer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.genresSectionRootContainer ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: auto;
+}
+
+.genresSectionRootContainer ol li {
+  border: 2px solid var(--border-list-items);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .genresSectionRootContainer {
+    padding: 0.8rem 0;
+  }
+}
