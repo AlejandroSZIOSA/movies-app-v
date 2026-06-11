@@ -5,7 +5,7 @@ import PaginationPanel from "../PaginationPanel/PaginationPanel";
 import Card from "../Card/Card";
 
 import AsyncStateOperations from "./../AsyncStateOperations/AsyncStateOperations";
-import Portal from "../Portal/Portal";
+import Portal from "../Portal/Portal"; //reach root layout and fix css problems
 
 import styles from "./SearchResultsList.module.css";
 
@@ -74,4 +74,4 @@ const SearchResultsList: React.FC<Props> = ({ queryInput }) => {
     </div>
   );
 };
-export default React.memo(SearchResultsList);
+export default SearchResultsList;

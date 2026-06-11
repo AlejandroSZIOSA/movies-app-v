@@ -32,13 +32,10 @@ const MoviesByGenreList: React.FC<Props> = ({ genreId }) => {
   );
 
   const updatePageInUrl = (newPage: number) => {
-    setSearchParams(
-      {
-        genre: genreId,
-        page: String(newPage),
-      },
-      { replace: true },
-    );
+    setSearchParams({
+      genre: genreId,
+      page: String(newPage),
+    });
   };
 
   return (
@@ -76,4 +73,4 @@ const MoviesByGenreList: React.FC<Props> = ({ genreId }) => {
   );
 };
 
-export default React.memo(MoviesByGenreList);
+export default MoviesByGenreList;

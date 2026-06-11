@@ -22,7 +22,6 @@ export type TMDBMovieResultsType = {
   popularity: number;
   poster_path: string | null;
   release_date: string; // ISO date string
-  softcore: boolean; // NOTE: not standard TMDB field, but included from your data
   video: boolean;
   vote_average: number;
   vote_count: number;
