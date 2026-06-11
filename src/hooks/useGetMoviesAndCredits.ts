@@ -7,11 +7,12 @@ import type {
 } from "../services/Apis.types";
 import { getErrorMessage } from "../utils/helpFunctions";
 
-export const useGetMoviesAndCredits = (params: string) => {
-  //fix:Removed generic type T parameter and added specific types for data state avoid type assertion in setData
-  const [data, setData] = useState<
-    TMDBMovieResultsType[] | TMDBMovieCastMemberType[] | null
-  >(null);
+export const useGetMoviesAndCredits = <
+  T extends TMDBMovieResultsType | TMDBMovieCastMemberType,
+>(
+  params: string,
+) => {
+  const [data, setData] = useState<T[] | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -21,9 +22,9 @@ export const useGetMoviesAndCredits = (params: string) => {
         setLoading(true);
         const resData = await APIs.getMoviesData(params);
         if ("results" in resData) {
-          setData(resData.results);
+          setData(resData.results as T[]);
         } else {
-          setData(resData.cast);
+          setData(resData.cast as T[]);
         }
       } catch (error: unknown) {
         //fix:Removed error assertion
