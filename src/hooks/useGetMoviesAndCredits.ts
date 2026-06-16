@@ -5,6 +5,7 @@ import type {
   TMDBMovieResultsType,
   TMDBMovieCastMemberType,
 } from "../services/Apis.types";
+import { getErrorMessage } from "../utils/helpFunctions";
 
 export const useGetMoviesAndCredits = <
   T extends TMDBMovieResultsType | TMDBMovieCastMemberType,
@@ -26,7 +27,8 @@ export const useGetMoviesAndCredits = <
           setData(resData.cast as T[]);
         }
       } catch (error: unknown) {
-        setError((error as Error).message);
+        //fix:Removed error assertion
+        setError(getErrorMessage(error));
       } finally {
         setLoading(false);
       }

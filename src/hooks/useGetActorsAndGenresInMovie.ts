@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as APIs from "../services/Apis";
 import type { TMDBDiscoverResultsType } from "../services/Apis.types";
+import { getErrorMessage } from "../utils/helpFunctions";
 
 export const useGetActorsAndGenresInMovie = (params: string) => {
   const [data, setData] = useState<TMDBDiscoverResultsType[] | null>(null);
@@ -16,7 +17,8 @@ export const useGetActorsAndGenresInMovie = (params: string) => {
         setData(resData.results);
         setTotalPages(resData.total_pages);
       } catch (error: unknown) {
-        setError((error as Error).message);
+        //fix:Removed error assertion
+        setError(getErrorMessage(error));
       } finally {
         setLoading(false);
       }

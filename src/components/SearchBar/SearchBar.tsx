@@ -35,7 +35,7 @@ const SearchBar: React.FC<Props> = ({
           <button
             type="button"
             onClick={handleSearch}
-            disabled={inputSearch.trim().length < 2}
+            disabled={inputSearch.trim().length < 1}
           >
             🔎
           </button>

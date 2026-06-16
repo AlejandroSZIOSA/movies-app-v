@@ -5,12 +5,14 @@ import type {
   TMDBMovieResultsType,
   TMDBActorDataType,
 } from "../services/Apis.types";
+import { getErrorMessage } from "../utils/helpFunctions";
 
 export const useGetMovieDetails = <
   T extends TMDBMovieResultsType | TMDBActorDataType,
 >(
   params: string,
 ) => {
+  //fix:Removed generic type T parameter and added specific types for data state avoid type assertion in setData
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -22,7 +24,8 @@ export const useGetMovieDetails = <
         const resData = await APIs.getMovieDetails(params);
         setData(resData as T);
       } catch (error: unknown) {
-        setError((error as Error).message);
+        //fix:Removed error assertion
+        setError(getErrorMessage(error));
       } finally {
         setLoading(false);
       }
