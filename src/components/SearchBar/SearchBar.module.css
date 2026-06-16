@@ -8,12 +8,12 @@
 
 .searchBarInputContainer {
   display: inline-flex;
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
 
 .searchBarInputContainer input {
-  width: stretch;
+  width: 100%;
 }
 
 .searchBarInputContainer input:focus {
